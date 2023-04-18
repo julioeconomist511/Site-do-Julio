@@ -8,13 +8,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
-    <h1> Estudando Matemática <h1>
-        <ul>
-            <li> Vídeos por conteúdo </li>
-            <li> Questões </li>
-        </ul>
+   <header class="cabecalho">
+        <img class="cabecalho-imagem" src="EstudandoMatemática.png" alt="Logo de Estudando Matemática">
+        <ul class="cabecalho-lista">
+            <li class="cabecalho-lista-item"> Vídeos por conteúdo </li>
+            <li class="cabecalho-lista-item"> Questões </li>
+    </ul>
    </header>
-    
+   <p>E aí pessoal, Tudo bem? Eu sou o <span style="color: blue;">professor Julio Cezar</span> 
+    e seja bem-vindo à página Estudando Matemática.</p>
+
+    <!-- Elemento de contêiner para o vídeo do YouTube -->
+<div id="player"></div>
+
+<!-- Script da API de incorporação do YouTube -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<!-- Script para criar o vídeo do YouTube usando a API de incorporação -->
+<script>
+  // Função de callback quando a API de incorporação está pronta
+  function onYouTubeIframeAPIReady() {
+    // Criação do player de vídeo
+    var player = new YT.Player('player', {
+      height: '360',
+      width: '640',
+      videoId: 'm-Pzc8xSlsU', // Substituir pelo ID do vídeo do YouTube
+      playerVars: {
+        // Configurações de reprodução, se necessário
+        autoplay: 1,
+        controls: 1,
+        showinfo: 0,
+        // Outras opções de reprodução
+      }
+    });
+  }
+</script>
 </body>
 </html>
+
+
